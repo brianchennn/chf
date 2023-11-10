@@ -124,6 +124,7 @@ func Login() error {
 }
 
 func SendCDR(supi string) error {
+	logger.CgfLog.Infof("Send %s's CDR", supi)
 	if cgf.conn == nil {
 		err := Login()
 
